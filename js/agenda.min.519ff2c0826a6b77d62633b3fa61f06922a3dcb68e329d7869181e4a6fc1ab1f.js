@@ -1,4 +1,4 @@
-(function(){const e=document.getElementById("next-event"),t=document.getElementById("agenda-full");if(!e&&!t)return;const a="/data/agenda.json",s={marche:"🥾",balade:"",voyage:"🚌",salon:"🏕️",repas:"🍽️",reunion:"🏛️",autre:"❓"};function o(e){return s[e]||s.autre}function n(e){const[t,n,s]=e.split("-").map(Number);return new Date(t,n-1,s)}function i(e){return e.toLocaleDateString("fr-BE",{weekday:"long",year:"numeric",month:"long",day:"numeric"})}function r(t){const s=n(t.date),a=o(t.type);e.innerHTML=`
+(function(){const e=document.getElementById("next-event"),t=document.getElementById("agenda-full");if(!e&&!t)return;const a="/data/agenda.json",s={marche:"🥾",balade:"🌲",voyage:"🚌",salon:"🏕️",repas:"🍽️",reunion:"🏛️",autre:"❓"};function o(e){return s[e]||s.autre}function n(e){const[t,n,s]=e.split("-").map(Number);return new Date(t,n-1,s)}function i(e){return e.toLocaleDateString("fr-BE",{weekday:"long",year:"numeric",month:"long",day:"numeric"})}function r(t){const s=n(t.date),a=o(t.type);e.innerHTML=`
     <div class="next-event-box entry agenda-with-icon">
       <div class="agenda-icon">${a}</div>
       <div class="agenda-content">
